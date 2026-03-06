@@ -7,8 +7,9 @@ from flask_cors import CORS
 import requests
 from dotenv import load_dotenv
 import anthropic
+from pathlib import Path
 
-load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
+load_dotenv(dotenv_path=Path(__file__).parent / '.env')
 
 app = Flask(__name__)
 CORS(app)
